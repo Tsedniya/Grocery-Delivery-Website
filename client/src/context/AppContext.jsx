@@ -1,13 +1,14 @@
-import { createContext,useState, useContext } from "react"
+import { createCogitntext,useState, useContext } from "react"
 import { useNavigate } from "react-router-dom";
 
 export const AppContext = createContext();
 
 export const AppContextProvider = ({children}) =>{
+    
     const navigate = useNavigate();
     const [user, setUser]= useState(null);
     const [isSeller, setIsSeller]= useState(false);
-    const [showUserLogin, setShowUserLogin] = usestate(false)
+    const [showUserLogin, setShowUserLogin] = useState(false)
    
     
     const value = {navigate, user, setUser,isSeller, setIsSeller,showUserLogin,setShowUserLogin
