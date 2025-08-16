@@ -9,7 +9,10 @@ const MainBanner = () => {
         <div>
           <h1>Freshness You Can Trust, Savings You Will Love! </h1>
         </div>
-
+           <Link>
+             shop now 
+             <img className='md:hidden transition group-focus:translate-x-1' src={assets.white_arrow_icon} alt="arrow"/>
+           </Link>
         <div>
           
         </div>
