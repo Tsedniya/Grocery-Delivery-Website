@@ -24,7 +24,7 @@ const MainBanner = () => {
 
            <Link to={"/products"} className='group hidden md:flex items-center gap-2 px-9 py-3 cursor-pointer'>
               Explore deals
-              <img className='transition group-hover:transition-x-1' src={assets.black_arrow_icon} alt="arrow" />
+              <img className='transition group-hover:translate-x-1' src={assets.black_arrow_icon} alt="arrow" />
 
            </Link>
         </div>
