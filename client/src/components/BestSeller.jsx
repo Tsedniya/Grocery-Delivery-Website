@@ -1,7 +1,10 @@
 import React from 'react'
 import ProductCard from './ProductCard';
+import { useAppContext } from '../context/AppContext';
 
-function BestSeller() {
+const BestSeller =()=> {
+
+  const {products} = useAppContext();
   return (
     <div className='mt-16'>
         
@@ -10,7 +13,7 @@ function BestSeller() {
         </p>
 
         <div>
-           <ProductCard/>
+           <ProductCard product={products[0]}/>
         </div>
         
     </div>
