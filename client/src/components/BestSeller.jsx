@@ -13,7 +13,7 @@ const BestSeller =()=> {
         </p>
 
         <div>
-           <ProductCard product={products[0]}/>
+           <ProductCard product={}/>
         </div>
         
     </div>
