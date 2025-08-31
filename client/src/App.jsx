@@ -6,6 +6,8 @@ import {Toaster} from "react-hot-toast"
 import Footer from './components/Footer';
 import Login from './components/Login';
 import { useAppContext } from './context/AppContext';
+import AllProducts from './pages/AllProducts';
+
 
 const App = () => {
   const isSellerPath = useLocation().pathname.includes("seller");
