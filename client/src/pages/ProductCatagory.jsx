@@ -2,7 +2,9 @@ import React from 'react'
 
 const ProductCatagory = () => {
   return (
-    <div>ProductCatagory</div>
+    <div>
+        now
+    </div>
   )
 }
 
