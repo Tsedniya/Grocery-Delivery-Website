@@ -10,10 +10,10 @@ const AllProducts = () => {
     useEffect(()=>{
         if(searchQuery.length > 0){
             setFilteredProducts(products.filter(
-                product => product.name.toLowerCase().include(searchQuery.toLowerCase())
+                product => product.name.toLowerCase().includes(searchQuery.toLowerCase())
                
              ))}else{
-                setFilteredProducts(products)
+                setFilteredProducts(products) 
              }
         },[products, searchQuery])
 
