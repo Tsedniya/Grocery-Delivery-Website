@@ -20,6 +20,9 @@ const Cart = () => {
         }
         setCartArray(tempArray)
     }
+    const placeOrder = async ()=>{
+
+    }
     useEffect(()=>{
         if(products.length > 0 && cartItems){
             getCart()
@@ -55,7 +58,7 @@ const Cart = () => {
                                     <p>Weight: <span>{product.weight || "N/A"}</span></p>
                                     <div className='flex items-center'>
                                         <p>Qty:</p>
-                                        <select className='outline-none'>
+                                        <select onChange={e => updateCartItem(product._id,Number(e.target.value))} value={cartItems[product._id]} className='outline-none'>
                                             {Array(cartItems[product._id] > 9 ? cartItems[product._id]:9).fill('').map((_, index) => (
                                                 <option key={index} value={index + 1}>{index + 1}</option>
                                             ))}
@@ -65,8 +68,8 @@ const Cart = () => {
                             </div>
                         </div>
                         <p className="text-center">{currency}{product.offerPrice * product.quantity}</p>
-                        <button onClick={()=>removeFromCart()}className="cursor-pointer mx-auto">
-                            <img src={assets.refresh_icon} alt="remove"
+                        <button onClick={()=>removeFromCart(product._id)}className="cursor-pointer mx-auto">
+                            <img src={assets.remove_icon} alt="remove"
                                 className="inline-block w-6 h-6"/>
                         </button>
                     </div>)
