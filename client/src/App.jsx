@@ -14,6 +14,9 @@ import AddAddress from './pages/AddAddress';
 import MyOrders from './pages/MyOrders';
 import SellerLogin from './components/seller/SellerLogin';
 import SellerLayout from './pages/seller/SellerLayout';
+import Orders from './pages/Orders';
+import AddProduct from './pages/AddProduct';
+import ProductList from  './pages/ProductList';
 
 
 const App = () => {
@@ -36,6 +39,9 @@ const App = () => {
           <Route path='/add-address' element={<AddAddress/>}/>
           <Route path='/my-orders' element={<MyOrders/>}/>
           <Route path='/seller' element={isSeller? <SellerLayout/>:<SellerLogin/>}>
+          <Route index element={isSeller ? <AddProduct/> : null}/>
+          <Route path="product-list" element={<ProductList/>}/>
+          <Route path="orders" element={<Orders/>} />
           
           </Route>
 
