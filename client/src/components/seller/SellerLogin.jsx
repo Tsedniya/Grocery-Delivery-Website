@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useAppContext } from '../../context/AppContext'
 
 const SellerLogin = () => {
-    const [isSeller, setIsSeller, navigate] = useAppContext()
+    const { isSeller, setIsSeller, navigate } = useAppContext()
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
@@ -22,7 +22,8 @@ const SellerLogin = () => {
                 <p className='text-2xl font-medium m-auto '><span className='text-primary'>Seller</span>Login</p>
                 <div className='w-full'>
                     <p>Email</p>
-                    <input type="email" placeholder='enter you email'
+                    <input onChange={(e)=>setEmail(e.target.value)} value={email}
+                       type="email" placeholder='enter you email'
                        className='border border-gray-200 rounded w-full p-2 mt-1 outline-primary' required/>
 
                 </div>
