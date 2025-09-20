@@ -1,8 +1,8 @@
 import React from 'react'
 import Navbar from './components/Navbar'
-import { Route,Routes,useLocation } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import Home from './pages/Home'
-import {Toaster} from "react-hot-toast"
+import { Toaster } from "react-hot-toast"
 import Footer from './components/Footer';
 import Login from './components/Login';
 import { useAppContext } from './context/AppContext';
@@ -10,6 +10,7 @@ import AllProducts from './pages/AllProducts';
 import ProductCatagory from './pages/ProductCatagory';
 import ProductDetails from './pages/ProductDetails';
 import Cart from './pages/Cart';
+
 import AddAddress from './pages/AddAddress';
 import MyOrders from './pages/MyOrders';
 import SellerLogin from './components/seller/SellerLogin';
@@ -27,10 +28,12 @@ const App = () => {
 
       {isSellerPath ? null :<Navbar/>}
       {showUserLogin ? <Login/> : null}
+
       <Toaster />
 
-      <div className={`${isSellerPath ? "" :"px-6 md:px-16 lg:px-24 xl:px-32"}`}>
+      <div className={`${isSellerPath ? "" : "px-6 md:px-16 lg:px-24 xl:px-32"}`}>
         <Routes>
+
           <Route path= '/' element={<Home/>} />
           <Route path='/products' element={<AllProducts/>}/>
           <Route path='/products/:category' element={<ProductCatagory/>}/>
@@ -45,11 +48,12 @@ const App = () => {
           
           </Route>
 
-          
+
         </Routes>
       </div>
-      {!isSellerPath && <Footer/>}
+      {!isSellerPath && <Footer />}
     </div>
   )
 }
+
 export default App;
